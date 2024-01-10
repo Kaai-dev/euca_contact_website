@@ -1,0 +1,256 @@
+@import "bootstrap";
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ /* Kaai Added Code */
+:root{
+      --EucaIOT: #0099ff;
+      --Euca: #66cc99;
+}
+
+
+
+/* Contact Form */
+
+
+
+
+/* Form Start */
+
+.checkbox-input{
+      accent-color: var(--Euca);
+}
+
+.checkbox-input-IOT{
+      accent-color: var(--EucaIOT);
+}
+
+.form-input {
+      font-family: 'Roboto', sans-serif;
+      height: 2rem;
+      width: 97.5%;
+      color: rgb(49, 51, 58);
+      font-size: 1.2rem;
+      border-radius: 0.2rem;
+      background-color: #f1f1f1;
+      border: none;
+      display: block;
+      border-bottom: 0.3rem solid transparent;
+      padding-left: 10px;
+      padding-top: 5px;
+}
+
+.form-input-half {
+      font-family: 'Roboto', sans-serif;
+      height: 2rem;
+      width: 95%;
+      color: rgb(49, 51, 58);
+      font-size: 1rem;
+      border-radius: 0.2rem;
+      background-color: #f1f1f1;
+      border: none;
+      display: block;
+      border-bottom: 0.3rem solid transparent;
+      padding-left: 10px;
+      padding-top: 5px;
+}
+
+
+.form-label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.3rem ;
+      display: block;
+      transition: all 0.3s;
+      transform: translateY(0rem);
+}
+
+
+.required-form {
+      color: red;
+}
+
+.label-content{
+      font-family: 'Roboto', sans-serif;
+      color: #000;
+}
+  
+
+
+/* Form end */
+
+
+  
+/* Button Start */
+  
+.btn {
+      padding: 1px 1px 45px 1px;
+      height: 2.5rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 45px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      border-radius: 0.2rem;
+}
+
+.btn:hover {
+      text-decoration: none;
+}
+
+.btn-IOT {
+      padding: 1px 1px 45px 1px;
+      height: 2.5rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 45px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 98%;
+      text-align: center;
+      border-radius: 0.2rem;
+}
+
+.btn-IOT:hover {
+      text-decoration: none;
+}
+
+.effect01 {
+      color: #FFF;
+      border: 2px solid #000;
+      box-shadow:0px 0px 0px 1px #000 inset;
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+}
+
+.effect01:hover {
+      border: 2px solid #000;
+      background-color: var(--Euca);;
+      color: #000;
+      box-shadow:0px 0px 0px 1px #EEE inset;
+}
+
+.effect01-IOT {
+      color: #FFF;
+      border: 2px solid #000;
+      box-shadow:0px 0px 0px 1px #000 inset;
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+}
+
+.effect01-IOT:hover {
+      border: 2px solid #000;
+      background-color: var(--EucaIOT);
+      color: #000;
+      box-shadow:0px 0px 0px 1px #EEE inset;
+}
+    
+/* Button text */
+
+.effect01 span {
+      transition: all 0.2s ease-out;
+      z-index: 2;
+}
+
+.effect01:hover span{
+      letter-spacing: 0.13em;
+      color: #000;
+}
+
+.effect01-IOT span {
+      transition: all 0.2s ease-out;
+      z-index: 2;
+}
+
+.effect01-IOT:hover span{
+      letter-spacing: 0.13em;
+      color: #000;
+}
+    
+/* Highlight */
+
+.effect01:after {
+      background: #FFF;
+      border: 0px solid #000;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .8;
+      position: absolute;
+      top: -50px;
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+      width: 50px;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+      z-index: 1;
+}
+
+.effect01:hover:after {
+      background: var(--Euca);;
+      border: 20px solid #000;
+      opacity: 0;
+      left: 120%;
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+}
+
+.effect01-IOT:after {
+      background: #FFF;
+      border: 0px solid #000;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .8;
+      position: absolute;
+      top: -50px;
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+      width: 50px;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+      z-index: 1;
+}
+
+.effect01-IOT:hover:after {
+      background: var(--EucaIOT);;
+      border: 20px solid #000;
+      opacity: 0;
+      left: 120%;
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+}
+    
+/* Button End*/
+
+
+
+
+
+  

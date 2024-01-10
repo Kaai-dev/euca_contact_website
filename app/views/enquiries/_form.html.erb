@@ -1,0 +1,82 @@
+<%= form_with(model: enquiry) do |form| %>
+  <% if enquiry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(enquiry.errors.count, "error") %> prohibited this enquiry from being saved:</h2>
+
+      <ul>
+        <% enquiry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="padding-left: 5%; padding-right: 5%;">
+    <div class="row mb-4 mt-3">
+      <div class="col-md-6 mb-4">
+        <%= form.label :first_name, style: "display: block" %>
+        <%= form.text_field :first_name, class: "form-control", required: true, placeholder: "John" %>
+
+      </div>
+      <div class="col-md-6">
+        <%= form.label style: "display: block" do %>
+          Surname <span class="required-form"> *</span>
+        <% end %>
+        <%= form.text_field :surname, class: "form-control", required: true, placeholder: "Doe" %>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6 mb-4">
+        <%= form.label style: "display: block" do %>
+          Email <span class="required-form"> *</span>
+        <% end %>
+        <%= form.email_field :email, class: "form-control", required: true, placeholder: "john@example.com" %>
+      </div>
+      <div class="col-md-6">
+        <%= form.label style: "display: block" do %>
+          Contact Number <span class="required-form"> *</span>
+        <% end %>
+      <%= form.telephone_field :contact_number, class: "form-control", required: true, placeholder: "011 ___ ____" %>
+      </div>
+    </div>
+
+
+    <div class="mb-4">
+    </div>
+
+    <div class="mb-4">
+      <%= form.label style: "display: block" do %>
+        Company <span class="required-form"> *</span>
+      <% end %>
+      <%= form.text_field :company, class: "form-control", required: true, placeholder: "Company" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :department, style: "display: block" %>
+      <%= form.text_field :department, class: "form-control", required: true, placeholder: "Department" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label style: "display: block" do %>
+        Message <span class="required-form"> *</span>
+      <% end %>
+      <%= form.text_area :message, class: "form-control", required: true, placeholder: "Message..." %>
+    </div>
+
+    <div class="mb-3">
+        <input name="acceptTerms" class="checkbox-input" id="acceptTerms" type="checkbox" data-type="acceptTerms" value="Yes" required="">
+        <label class="" for="acceptTerms"><span class="label-content" data-label="I agree to EUCA Technologies  Terms and Conditions">I agree to EUCA Technologies  <b><a class="label-content" href="https://euca.co.za/pages/terms-amp-conditions" target="_blank">Terms and Conditions</a></b></span></label>
+        <b><small class="messages"></small></b>
+    </div>
+
+
+    <div class="mb-3">
+      <%= form.submit "Submit", class: "btn effect01" %>
+    </div>
+    
+  </div>
+
+
+
+<% end %>
